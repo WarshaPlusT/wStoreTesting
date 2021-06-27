@@ -1,0 +1,22 @@
+{
+  "name": "project1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./node_modules/mocha/bin/mocha --timeout=30000 ./tests",
+    "test:device": "node ./node_modules/mocha/bin/mocha --timeout=30000 ./tests/device.test.js",
+    "test:parts": "node ./node_modules/mocha/bin/mocha --timeout=100000000 ./tests/parts.test.js",
+    "test:taqdeer": "node ./node_modules/mocha/bin/mocha --timeout=9000000000 ./tests/taqdeer.test.js",
+    "test:partsNahdi": "node ./node_modules/mocha/bin/mocha --timeout=9000000000 ./tests/partsNahdi.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^8.4.0",
+    "prettier": "^2.3.1",
+    "puppeteer": "^8.0.0"
+  }
+}
