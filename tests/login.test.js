@@ -28,28 +28,30 @@ describe('Login Tests', () => {
     })
 
     it('should not passed Invalid Credentials', async function() {
-        await page.goto('http://zero.webappsecurity.com/index.html')
+        await page.goto('http://warsha.menastore.co/')
         
-        await page.waitForSelector('#signin_button')
-        await page.click('#signin_button')        
+        await page.waitForSelector('body > div.page-wrapper > header > div.panel.wrapper > div > ul > li:nth-child(4) > a')
+        await page.click('body > div.page-wrapper > header > div.panel.wrapper > div > ul > li:nth-child(4) > a')        
         
-        await page.waitForSelector('#login_form')
-        await page.type('#user_login', 'invalid id')
-        await page.type('#user_password', 'invalid password')
-        await page.click('#user_remember_me')
-        await page.click('input[type="submit"]')
-        await page.waitForSelector('.alert-error')
+        await page.waitForSelector('#login-form > fieldset')
+        await page.type('#email', 'Not_Falid_Emeail@gmail.com')
+        await page.type('#pass', 'Ab0552454557')
+        //await page.click('#user_remember_me')
+        await page.click('#login-form > fieldset > div.actions-toolbar > div.primary')
+        await page.waitForSelector('#wk-mp-menu-dashboard > a')
     })
 
     it('should pass Validate Credentials', async function() {        
-        await page.goto('http://zero.webappsecurity.com/index.html')        
-        await page.waitForSelector('#signin_button')
-        await page.click('#signin_button')                
-        await page.waitForSelector('#login_form')
-        await page.type('#user_login', 'username')
-        await page.type('#user_password', 'password')
-        await page.click('#user_remember_me')
-        await page.click('input[type="submit"]')
-        await page.waitForSelector('#settingsBox')
+        await page.goto('http://warsha.menastore.co/')
+        
+        await page.waitForSelector('body > div.page-wrapper > header > div.panel.wrapper > div > ul > li:nth-child(4) > a')
+        await page.click('body > div.page-wrapper > header > div.panel.wrapper > div > ul > li:nth-child(4) > a')        
+        
+        await page.waitForSelector('#login-form > fieldset')
+        await page.type('#email', 'bejad.alhrbie@gmail.com')
+        await page.type('#pass', 'Ab0552454557')
+        //await page.click('#user_remember_me')
+        await page.click('#login-form > fieldset > div.actions-toolbar > div.primary')
+        await page.waitForSelector('#wk-mp-menu-dashboard > a')
     })
 })
