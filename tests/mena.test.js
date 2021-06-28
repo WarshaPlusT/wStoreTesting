@@ -41,15 +41,5 @@ describe('Login Tests', () => {
         await page.waitForSelector('body > div.page-wrapper > header > div.header.content > div.dropdown > label')
     })
 
-    /*it('should pass Validate Credentials', async function() {        
-        await page.goto('http://zero.webappsecurity.com/index.html')        
-        await page.waitForSelector('#signin_button')
-        await page.click('#signin_button')                
-        await page.waitForSelector('#login_form')
-        await page.type('#user_login', 'username')
-        await page.type('#user_password', 'password')
-        await page.click('#user_remember_me')
-        await page.click('input[type="submit"]')
-        await page.waitForSelector('#settingsBox')
-    })*/
+    
 })
